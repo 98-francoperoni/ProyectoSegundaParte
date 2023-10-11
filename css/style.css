@@ -1,0 +1,277 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none; 
+}
+
+body {
+    font-family:'Poppins', sans-serif;
+    background-color: #161D25;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.header {
+    background-image: linear-gradient(rgba (0 , 0 , 0 , 0.5), rgba(0 , 0 , 0 , 0.5));
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 200px 0;
+    position: relative;
+}
+
+.back-video , .back-video-page2 , .back-video-page3 , .back-video-page4 {
+    position:absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+}
+
+.menu-container {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    backdrop-filter: blur(50px);
+    z-index: 1000;
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+    font-weight: 800;
+    padding-left: 20px;
+    text-transform: uppercase;
+}
+
+.menu-container .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu-container .navbar ul li a {
+    font-size: 18px;
+    color: white;
+    display: block;
+    font-weight: 600;
+    padding: 20px;
+    transition: all .2s ease;
+}
+
+.menu-container .navbar ul li a:hover {
+    color:rgb(247, 96, 96);
+}
+
+#menu {
+    display:none;
+}
+
+.menu-icon {
+    width:25px;
+    display: none;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.main-titulo {
+    width: 100%;
+    text-align: center;
+}
+
+.main-titulo h1 {
+    color: white;
+    font-size: 70px;
+    line-height: 80px;
+    text-transform: uppercase;
+    margin-top: 300px;
+    text-shadow: 0 0 9px rgb(164, 47, 47);
+}
+
+.main-titulo span {
+    color: rgb(247, 96, 96);
+}
+
+.main-titulo p {
+    color: white;
+    font-size: 20px;
+}
+
+/* .......page 2.......... */
+
+.title-page2 {
+    color: rgb(247, 96, 96);
+    font-size: 25px;   
+    display: flex;
+    margin-top: 100px;
+    padding: 30px;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    min-width: 300px;
+    position: relative;
+    background-color: rgba(146, 136, 136 , 0.6);
+}
+
+.title-page2 p , .title-page3 p , .title-page4 p {
+    color: white; 
+}
+
+.conteiner-photos {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    min-width: 300px;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.conteiner-photos img:hover {
+    cursor:auto;
+    width: 300px;
+    opacity: 2;
+    filter:contrast(120%);
+}
+
+/* ......page 3......... */
+
+.section-page3 { 
+    color:rgb(247, 96, 96);
+    font-size: 20px;
+    padding: 20px;
+    position: relative;
+    display: flex;
+    background-color: rgba(146, 136, 136 , 0.6);
+    min-width:300px; 
+    flex-wrap: wrap;
+    gap: 20px;
+    top:100px;
+}
+
+.section-page3 p {
+    color:white;
+}
+
+/* ......page 4......... */
+
+.title-page4 {
+    color: rgb(247, 96, 96) ;
+    font-size: 15px;
+    margin: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 300px;
+    position: relative;
+    background-color: rgba(146, 136, 136 , 0.6) ;
+    top:100px;
+}
+
+.flex-container-aside {
+    display: flex;
+    position: relative;
+    margin-left: 20%;
+    top:100px;
+}
+
+.flex-container-aside img:hover {
+    transition: .5s ease;
+    width: 300px;
+    filter:contrast(120%);
+}
+
+.footer-page4 {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:  rgba(146, 136, 136 , 0.6);
+    color: white;
+    margin: 20px;
+    top:100px;
+}
+
+/* ......page 5......... */
+.back-img-page5 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    object-fit: cover;
+}
+
+.main-content {
+    color: white;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    top: 100px;
+}
+
+.comment-one ,.comment-two , .comment-three , .comment-four , .comment-five {
+    background-color: rgba(146, 136, 136 , 0.6);
+    margin: 5px;
+}
+
+.main-content h1 {
+    color: rgb(247, 96, 96);
+}
+
+@media (max-width: 991px){
+
+    .menu-icon {
+        display: block;
+    }
+
+    .menu-container {
+        padding: 20px;
+    }
+
+    .menu-container label {
+        display: initial;
+    }
+    
+    .menu-container .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #24272E ;
+        display: none;
+    }
+
+    .menu-container .navbar ul li {
+        width: 100%;
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header {
+        padding: 50px 30px;
+    }
+
+    .main-titulo h1 {
+        text-align: center;
+        padding: 0;
+        font-size:40px;
+        text-shadow: 0 0 5px rgb(164, 47, 47);
+    }
+}
+
