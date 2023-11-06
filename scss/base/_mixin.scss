@@ -1,0 +1,117 @@
+@mixin medidas($kg, $pr){
+    margin: $kg;
+    padding: $pr;
+}
+* {
+    @include medidas(0,0); 
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    @include medidas(0,0);
+    font-family: nth($font-fmaily, 1), sans-serif;
+    background-color:nth($colores, 1);
+    height:nth($tamanos, 3);
+}
+.service-page3 {
+    @include medidas(0px 10px, 25px);
+    box-shadow: 0px 0px 20px nth($colores, 8);
+    h3{
+        color:$bg-ssc;
+        font-size: 25px;
+        padding: 10px;    
+    }
+    p{
+        color: nth($colores , 2 );
+        padding: 10px;
+    }
+}
+.contact-form form p{
+    @include medidas(0, 1em );
+}
+.comment-page5 {
+    @include medidas(10px 10px, 10px );
+    flex-direction: column;
+    box-shadow: 0px 0px 20px nth($colores, 10 );
+    h1{
+        font-size: 20px;
+        color: $bg-ssc;    
+    }
+}
+@mixin combi($qw, $mi , $iu){
+    top: $qw;
+    right: $mi;
+    left:$iu;
+}
+.menu-container {
+    @include combi(10,0,0);
+}
+.team-group img{
+    @include combi(0,0 ,0);
+}
+.background,
+.background-page2,
+.background-page4,
+.back-img-page5 {
+    @include combi(0,0 ,0 );
+}
+
+// para display y position--!!
+
+@mixin display ($di) {
+    display: $di;
+}
+
+.header,
+.menu-container,
+.main-title,
+.box-2,
+.services-group,
+.blog-content,
+.team-group,
+.service-container3,
+.main-content {
+    display: flex;
+}
+.menu-container .navbar ul li a,
+.link ul {
+    @include display(block);
+}
+#menu,
+.menu-icon,
+.menu label {
+    @include display(none);
+}
+.btn-1,
+.btn1-page2,
+.btn-2,
+.btn-page3 {
+    @include display(inline-block);
+}
+.about-main,
+.box-3,
+.contact-form form {
+    @include display(grid);
+}
+
+@mixin posicion ($po) {
+    position: $po;
+}
+
+.header,
+.menu-container .navbar ul li,
+.about-main,
+.team,
+.team-group img {
+    @include posicion (relative);
+}
+.background,
+.background-page2,
+.background-page4,
+.back-img-page5,
+.under-background,
+.menu-container,
+.main-content {
+    @include posicion(absolute);
+}
